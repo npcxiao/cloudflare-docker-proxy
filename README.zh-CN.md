@@ -38,6 +38,14 @@ CLOUDFLARE_ACCOUNT_ID: Cloudflare Account ID
 
 ```
 
+### 修改 Deploy
+
+```javascript
+const routes = {
+  "${workername}.${username}.workers.dev/": "https://registry-1.docker.io",
+};
+```
+
 ## 使用
 
 ### 修改 `/etc/docker/daemon.json`
