@@ -1,5 +1,9 @@
 ## 部署
 
+### Fork 下面的项目
+
+`https://github.com/ciiiii/cloudflare-docker-proxy`
+
 ### 创建 API Token
 
 1. 登录 Cloudflare，点击左侧的 Workers and Pages，复制右侧窗口的 Account ID
@@ -38,13 +42,13 @@ CLOUDFLARE_ACCOUNT_ID: Cloudflare Account ID
 
 ```
 
-### 修改 Deploy
+### 修改 README.md 中的 Deploy to Cloudflare Workers 按钮的 Url
 
-```javascript
-const routes = {
-  "${workername}.${username}.workers.dev/": "https://registry-1.docker.io",
-};
-```
+将 `https://github.com/ciiiii/cloudflare-docker-proxy` 改为自己的仓库地址
+
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/ciiiii/cloudflare-docker-proxy)
+
+### 点击 Deploy to Cloudflare Workers 部署代码
 
 ## 使用
 
