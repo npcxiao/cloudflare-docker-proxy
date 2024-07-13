@@ -28,6 +28,20 @@ const routes = {
 };
 ```
 
+### 为代码仓库启用 Github Actions
+
+> Actions > I understand my workflows, go ahead and enable them
+
+### 添加 Secrets
+
+> Settings > Secrets > New repository secre
+
+```
+CLOUDFLARE_API_TOKEN: Cloudflare API Token
+CLOUDFLARE_ACCOUNT_ID: Cloudflare Account ID
+
+```
+
 ### 修改 README.md 中的 Deploy to Cloudflare Workers 按钮的 Url
 
 > 将 `https://github.com/ciiiii/cloudflare-docker-proxy` 改为自己的仓库地址，例如：
@@ -72,20 +86,4 @@ const routes = {
 docker pull k8s.ketches.cn/pause:3.9
 ```
 
-## 使用 Github Actions 部署
 
-TODO: 待更新
-
-### 为代码仓库启用 Github Actions
-
-> Actions > I understand my workflows, go ahead and enable them
-
-### 添加 Secrets
-
-> Settings > Secrets > New repository secre
-
-```
-CLOUDFLARE_API_TOKEN: Cloudflare API Token
-CLOUDFLARE_ACCOUNT_ID: Cloudflare Account ID
-
-```
