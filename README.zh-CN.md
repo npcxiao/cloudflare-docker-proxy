@@ -14,7 +14,7 @@
 
 ### 修改 `src/index.js`
 
-将 `ketches.cn` 替换为自己的域名
+> 将 `ketches.cn` 替换为自己的域名
 
 ```javascript
 const routes = {
@@ -28,23 +28,18 @@ const routes = {
 };
 ```
 
-### 为代码仓库启用 Github Actions
-
-Actions > I understand my workflows, go ahead and enable them
-
-### 添加 Secrets
-
-Settings > Secrets > New repository secre
-
-```
-CLOUDFLARE_API_TOKEN: Cloudflare API Token
-CLOUDFLARE_ACCOUNT_ID: Cloudflare Account ID
-
-```
-
 ### 修改 README.md 中的 Deploy to Cloudflare Workers 按钮的 Url
 
-将 `https://github.com/ciiiii/cloudflare-docker-proxy` 改为自己的仓库地址
+> 将 `https://github.com/ciiiii/cloudflare-docker-proxy` 改为自己的仓库地址，例如：
+
+```markdown
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/ciiiii/cloudflare-docker-proxy)
+
+# 更改为
+
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/npcxiao/cloudflare-docker-proxy)
+```
+
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/ciiiii/cloudflare-docker-proxy)
 
@@ -73,4 +68,22 @@ CLOUDFLARE_ACCOUNT_ID: Cloudflare Account ID
 # use k8s.ketches.cn as the registry proxy =>
 
 docker pull k8s.ketches.cn/pause:3.9
+```
+
+## 使用 Github Actions 部署
+
+TODO: 待更新
+
+### 为代码仓库启用 Github Actions
+
+> Actions > I understand my workflows, go ahead and enable them
+
+### 添加 Secrets
+
+> Settings > Secrets > New repository secre
+
+```
+CLOUDFLARE_API_TOKEN: Cloudflare API Token
+CLOUDFLARE_ACCOUNT_ID: Cloudflare Account ID
+
 ```
