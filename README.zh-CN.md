@@ -1,10 +1,10 @@
 ## 部署
 
-### Fork 下面的项目
+1. 打开下面的仓库链接，将项目 Fork 到自己账号
 
 `https://github.com/ciiiii/cloudflare-docker-proxy`
 
-### 创建 API Token
+2. 创建 API Token
 
 1. 登录 Cloudflare，点击左侧的 Workers and Pages，复制右侧窗口的 Account ID
 2. 点击右上角的头像，选择 My Profile
@@ -12,19 +12,19 @@
 4. 选择 Account Resources，选择 Specific Zone，选择自己的域名，点击 Continue to Summary
 5. 检查并点击创建 cloudflare API Token，复制 Token
 
-### 修改仓库中的 `src/index.js`
+3. 修改仓库中的 `src/index.js`
 
 > 将 `ketches.cn` 替换为自己的域名
 
 ```javascript
 const routes = {
-  "docker.ketches.cn": "https://registry-1.docker.io",
-  "quay.ketches.cn": "https://quay.io",
-  "gcr.ketches.cn": "https://gcr.io",
-  "k8s-gcr.ketches.cn": "https://k8s.gcr.io",
-  "k8s.ketches.cn": "https://registry.k8s.io",
-  "ghcr.ketches.cn": "https://ghcr.io",
-  "cloudsmith.ketches.cn": "https://docker.cloudsmith.io",
+  "docker.yourdomain.com": "https://registry-1.docker.io",
+  "quay.yourdomain.com": "https://quay.io",
+  "gcr.yourdomain.com": "https://gcr.io",
+  "k8s-gcr.yourdomain.com": "https://k8s.gcr.io",
+  "k8s.yourdomain.com": "https://registry.k8s.io",
+  "ghcr.yourdomain.com": "https://ghcr.io",
+  "cloudsmith.yourdomain.com": "https://docker.cloudsmith.io",
 };
 ```
 ### 修改 README.md 文件中的 Deploy to Cloudflare Workers 按钮的 Url
@@ -70,9 +70,9 @@ CLOUDFLARE_ACCOUNT_ID: Cloudflare Account ID
 
 ```bash
 # docker pull k8s.gcr.io/pause:3.9
-# use k8s.ketches.cn as the registry proxy =>
+# use k8s.yourdomain.com as the registry proxy =>
 
-docker pull k8s.ketches.cn/pause:3.9
+docker pull k8s.yourdomain.com/pause:3.9
 ```
 
 
