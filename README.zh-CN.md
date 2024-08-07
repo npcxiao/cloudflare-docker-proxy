@@ -12,7 +12,7 @@
 4. 选择 Account Resources，选择 Specific Zone，选择自己的域名，点击 Continue to Summary
 5. 检查并点击创建 cloudflare API Token，复制 Token
 
-### 修改 `src/index.js`
+### 修改仓库中的 `src/index.js`
 
 > 将 `ketches.cn` 替换为自己的域名
 
@@ -27,22 +27,7 @@ const routes = {
   "cloudsmith.ketches.cn": "https://docker.cloudsmith.io",
 };
 ```
-
-### 为代码仓库启用 Github Actions
-
-> Actions > I understand my workflows, go ahead and enable them
-
-### 添加 Secrets
-
-> Settings > Secrets > New repository secre
-
-```
-CLOUDFLARE_API_TOKEN: Cloudflare API Token
-CLOUDFLARE_ACCOUNT_ID: Cloudflare Account ID
-
-```
-
-### 修改 README.md 中的 Deploy to Cloudflare Workers 按钮的 Url
+### 修改 README.md 文件中的 Deploy to Cloudflare Workers 按钮的 Url
 
 > 将 `https://github.com/ciiiii/cloudflare-docker-proxy` 改为自己的仓库地址，例如：
 
@@ -56,20 +41,24 @@ CLOUDFLARE_ACCOUNT_ID: Cloudflare Account ID
 
 [![部署](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/npcxiao/cloudflare-docker-proxy)
 
+### 点击 README.md 中的按钮 `Deploy to Cloudflare Workers` 部署代码
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/ciiiii/cloudflare-docker-proxy)
+### 为代码仓库启用 Github Actions
 
-### 点击 Deploy to Cloudflare Workers 部署代码
+> Actions > I understand my workflows, go ahead and enable them
+
+### 添加 Secrets
+
+> Settings > Secrets > New repository secre
+
+```
+CLOUDFLARE_API_TOKEN: Cloudflare API Token
+CLOUDFLARE_ACCOUNT_ID: Cloudflare Account ID
+```
 
 ## 使用
 
 ### 修改 `/etc/docker/daemon.json`
-
-```json
-{
-  "registry-mirrors": ["https://<workername>.<username>.workers.dev"]
-}
-```
 
 ```json
 {
