@@ -12,7 +12,7 @@
 
 2. 打开下面的仓库链接，将项目 Fork 到自己账号
 
-`https://github.com/ciiiii/cloudflare-docker-proxy`
+https://github.com/ciiiii/cloudflare-docker-proxy
 
 3. 创建 API Token
 
