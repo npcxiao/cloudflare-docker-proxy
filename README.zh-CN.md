@@ -1,4 +1,4 @@
-## 部署
+## 准备
 
 1. 打开下面的仓库链接，将项目 Fork 到自己账号
 
@@ -39,15 +39,18 @@ const routes = {
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/npcxiao/cloudflare-docker-proxy)
 ```
 
+
+## 部署
+
+1. 点击下面的按钮部署代码：
+
 [![部署](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/npcxiao/cloudflare-docker-proxy)
 
-### 点击 README.md 中的按钮 `Deploy to Cloudflare Workers` 部署代码
-
-### 为代码仓库启用 Github Actions
+2. 为代码仓库启用 Github Actions
 
 > Actions > I understand my workflows, go ahead and enable them
 
-### 添加 Secrets
+3. 添加 Secrets
 
 > Settings > Secrets > New repository secre
 
